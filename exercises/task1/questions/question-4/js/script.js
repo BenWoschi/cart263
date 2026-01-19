@@ -34,8 +34,6 @@ let rectangle3 = {
     }
 };
 
-
-
 function setup() {
     createCanvas(400, 400);
 }
@@ -46,6 +44,7 @@ function draw() {
     rect1();
     rect2();
     rect3();
+    hover();
 }
 
 function rect1() {
@@ -64,4 +63,38 @@ function rect3() {
     noStroke();
     fill(rectangle3.fill.r, rectangle3.fill.g, rectangle3.fill.b);
     rect(width / 3 * 2, 0, width / 3, height);
+}
+
+function hover(){
+if (mouseX >= 0 && mouseX <= width/3){
+    rectangle1.fill.r = 255;
+    rectangle1.fill.g = 255;
+    rectangle1.fill.b = 255;
+} else {
+    rectangle1.fill.r = 27;
+    rectangle1.fill.g = 227;
+    rectangle1.fill.b = 184;
+}
+
+
+
+if (mouseX >= width/3 && mouseX <= width/3 * 2){
+    rectangle2.fill.r = 255;
+    rectangle2.fill.g = 255;
+    rectangle2.fill.b = 255;
+} else {
+    rectangle2.fill.r = 27;
+    rectangle2.fill.g = 210;
+    rectangle2.fill.b = 227;
+}
+
+if (mouseX >= width/3 * 2 && mouseX <= width){
+    rectangle3.fill.r = 255;
+    rectangle3.fill.g = 255;
+    rectangle3.fill.b = 255;
+} else {
+    rectangle3.fill.r = 27;
+    rectangle3.fill.g = 67;
+    rectangle3.fill.b = 227;
+}
 }
