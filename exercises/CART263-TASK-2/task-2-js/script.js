@@ -4,35 +4,79 @@ window.onload = setup;
 function setup(){
 console.log("we are a go!")
 /*** ALL ANWSERS TO BE ADDED IN THE ALLOCATED SPACE */
-/*** START PART ONE ACCESS */ 
-/* 1: all paragraph elements */
-/***CODE */
+/*** START PART ONE ACCESS */
+    /* 1: all paragraph elements */
+    
+    /***CODE */
+
+    /* console.log(document.querySelectorAll("p")); */
+    
+/***OUTPUT:
+ * {
+    "0": {},
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {},
+    "5": {},
+    "6": {},
+    "7": {},
+    "8": {}
+}
+ * 
+ */
+    
+/*************************************** */
+    /* 2: only the first paragraph element */
+    
+    /***CODE */
+
+    /* console.log(document.querySelector("p")); */
+
 /***OUTPUT: 
+ * <p id="1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perspiciatis blanditiis, et
+            laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur ducimus
+            officiis non
+            quasi officia sit veniam!
+    </p>
  * 
  */
 
 
 /*************************************** */
-/* 2: only the first paragraph element */
-/***CODE */
-/***OUTPUT: 
- * 
- */
+    /* 3: all elements with the class inner-container */
+    
+    /***CODE */
 
+    /* console.log(document.querySelectorAll(".inner-container")); */
 
-/*************************************** */
-/* 3: all elements with the class inner-container */
-/***CODE */
 /***OUTPUT: 
+ * {
+    "0": {},
+    "1": {},
+    "2": {},
+    "3": {},
+    "4": {},
+    "5": {},
+    "6": {},
+    "7": {}
+}
  * 
  */
 
 
 /*************************************** */
 /* 4: the last image element inside the element that has the class img-container */
-/***CODE */
+    /***CODE */
+    
+    /* console.log(document.querySelectorAll(".img-container")[7]); */
+
 /***OUTPUT: 
  * 
+ * <div class="img-container">
+                        <img class="img-image" src="task-2-images/seventeen.png">
+                    </div>
  */
 
 
@@ -40,16 +84,144 @@ console.log("we are a go!")
 /* 5A: all h2 elements */
 /* 5B: length of the list in 5A */
 /* 5C: the text content of the first element in the list from 5A */
-/***CODE */
+    /***CODE */
+
+   /* console.log(document.getElementsByTagName("h2")); */
+   /* console.log(document.getElementsByTagName("h2").length); */
+    /* console.log(document.getElementsByTagName("h2")[0]); */
+    
 /***OUTPUT: 
+ * 
+ * {
+    "0": {}
+}
+
+ * 1
+
+ * <h2> The header of this fancy page</h2>
  * 
  */
 
 
 /*************************************** */
 /* 6: the element with id name parent */
-/***CODE */
+    /***CODE */
+
+    /* console.log(document.getElementById("parent")); */
+
 /***OUTPUT: 
+ * 
+ * <section id="parent">
+            <div class="inner-container">
+                <div class="content-container">
+                    <div class="img-container">
+                        <img class="img-image" src="task-2-images/sixteen.png">
+                    </div>
+                    <p id="2" class="img-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        perspiciatis blanditiis, et
+                        laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur
+                        ducimus officiis non
+                        quasi officia sit veniam!</p>
+
+                </div>
+            </div>
+            <div class="inner-container">
+                <div class="content-container">
+                    <div class="img-container">
+                        <img class="img-image" src="task-2-images/eight.png">
+                    </div>
+                    <p id="3" class="img-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        perspiciatis blanditiis, et
+                        laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur
+                        ducimus officiis non
+                        quasi officia sit veniam!</p>
+
+                </div>
+            </div>
+            <div class="inner-container">
+
+                <div class="content-container">
+                    <div class="img-container">
+                        <img class="img-image" src="task-2-images/eleven.png">
+                    </div>
+                    <p id="4" class="img-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        perspiciatis blanditiis, et
+                        laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur
+                        ducimus officiis non
+                        quasi officia sit veniam!</p>
+
+                </div>
+            </div>
+            <div class="inner-container">
+                <div class="content-container">
+                    <div class="img-container">
+                        <img class="img-image" src="task-2-images/fifteen.png">
+                    </div>
+                    <p id="5" class="img-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        perspiciatis blanditiis, et
+                        laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur
+                        ducimus officiis non
+                        quasi officia sit veniam!</p>
+
+                </div>
+            </div>
+            <div class="inner-container">
+                <div class="content-container">
+                    <div class="img-container">
+                        <img class="img-image" src="task-2-images/five.png">
+                    </div>
+                    <p id="6" class="img-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        perspiciatis blanditiis, et
+                        laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur
+                        ducimus officiis non
+                        quasi officia sit veniam!</p>
+
+                </div>
+            </div>
+            
+            <div class="inner-container">
+                <div class="content-container">
+                    <div class="img-container">
+                        <img class="img-image" src="task-2-images/three.png">
+                    </div>
+                    <p id="7" class="img-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        perspiciatis blanditiis, et
+                        laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur
+                        ducimus officiis non
+                        quasi officia sit veniam!</p>
+
+                </div>
+            </div>
+            
+            <div class="inner-container">
+                <div class="content-container">
+                    <div class="img-container">
+                        <img class="img-image" src="task-2-images/twelve.png">
+                    </div>
+                    <p id="8" class="img-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        perspiciatis blanditiis, et
+                        laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur
+                        ducimus officiis non
+                        quasi officia sit veniam!</p>
+
+                </div>
+            </div>
+            
+            <div class="inner-container">
+                <div class="content-container">
+                    <div class="img-container">
+                        <img class="img-image" src="task-2-images/seventeen.png">
+                    </div>
+                    <p id="9" class="img-descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                        perspiciatis blanditiis, et
+                        laborum praesentium earum. Enim facere, quia commodi voluptate, quis asperiores, pariatur
+                        ducimus officiis non
+                        quasi officia sit veniam!</p>
+
+                </div>
+            </div>
+            
+        </section>
  * 
  */
 
