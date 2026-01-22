@@ -255,16 +255,24 @@ console.log("we are a go!")
 /* 4: Select the third paragraph element on the page and 
 replace the content (within the paragraph) to be an h2 element which contains the text `TEST 123`
 /***CODE */
+    
+    document.querySelectorAll("p")[2].innerHTML = "<h2>TEST123</h2>";
 
 /*************************************** */
 /* 5: Select the fourth paragraph element on the page and 
 add to the existing content an h2 element containing the text `TEST 123`
 /***CODE */
+    
+    document.querySelectorAll("p")[3].innerHTML += "<h2>TEST123</h2>";
 
 /*************************************** */
 /* 6: Select the fifth paragraph element on the page and add to the existing content 
 an img element that holds `one.png`, and add the class newStyle to said paragraph element.
 /***CODE */
+    
+    document.querySelectorAll("p")[4].classList.add("newStyle");
+    document.querySelectorAll("p")[4].innerHTML += '<img src = "task-2-images/one.png" alt="test-image">';
+
 
 
 /*************************************** */
