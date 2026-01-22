@@ -226,22 +226,30 @@ console.log("we are a go!")
  */
 
 /*************************************** */
-/*** END PART ONE ACCESS */ 
+/*** END PART ONE ACCESS */
 
 
 /*************************************** */
-/*** START PART TWO MODIFY */ 
+/*** START PART TWO MODIFY */
 /*************************************** */
 /* 1: Select the first paragraph and replace the text within the paragraph... */
-/***CODE */
+    /***CODE */
+    
+    document.querySelector("p").textContent = "text changed by Ben. January 22nd, 2026";
+
 /*************************************** */
 /* 2: Select all elements in the HTML that have the class name content-container
  and change the background color ... of first and second ...*/
-/***CODE */
+    /***CODE */
+    
+    document.querySelectorAll(".content-container")[0].style.backgroundColor = "#db831f";
+    document.querySelectorAll(".content-container")[1].style.backgroundColor = "#cb1fdb";
 
 /*************************************** */
 /* 3: Change the src element of the first image element on the page to be ...
 /***CODE */
+    
+    document.querySelectorAll("img")[0].setAttribute("src", "task-2-images/seven.png");
 
 /*************************************** */
 /* 4: Select the third paragraph element on the page and 
