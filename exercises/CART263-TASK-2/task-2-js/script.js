@@ -235,43 +235,43 @@ console.log("we are a go!")
 /* 1: Select the first paragraph and replace the text within the paragraph... */
     /***CODE */
     
-    document.querySelector("p").textContent = "text changed by Ben. January 22nd, 2026";
+    // document.querySelector("p").textContent = "text changed by Ben. January 22nd, 2026";
 
 /*************************************** */
 /* 2: Select all elements in the HTML that have the class name content-container
  and change the background color ... of first and second ...*/
     /***CODE */
     
-    document.querySelectorAll(".content-container")[0].style.backgroundColor = "#db831f";
-    document.querySelectorAll(".content-container")[1].style.backgroundColor = "#cb1fdb";
+    // document.querySelectorAll(".content-container")[0].style.backgroundColor = "#db831f";
+    // document.querySelectorAll(".content-container")[1].style.backgroundColor = "#cb1fdb";
 
 /*************************************** */
 /* 3: Change the src element of the first image element on the page to be ...
 /***CODE */
     
-    document.querySelectorAll("img")[0].setAttribute("src", "task-2-images/seven.png");
+    // document.querySelectorAll("img")[0].setAttribute("src", "task-2-images/seven.png");
 
 /*************************************** */
 /* 4: Select the third paragraph element on the page and 
 replace the content (within the paragraph) to be an h2 element which contains the text `TEST 123`
 /***CODE */
     
-    document.querySelectorAll("p")[2].innerHTML = "<h2>TEST123</h2>";
+    // document.querySelectorAll("p")[2].innerHTML = "<h2>TEST123</h2>";
 
 /*************************************** */
 /* 5: Select the fourth paragraph element on the page and 
 add to the existing content an h2 element containing the text `TEST 123`
 /***CODE */
     
-    document.querySelectorAll("p")[3].innerHTML += "<h2>TEST123</h2>";
+    // document.querySelectorAll("p")[3].innerHTML += "<h2>TEST123</h2>";
 
 /*************************************** */
 /* 6: Select the fifth paragraph element on the page and add to the existing content 
 an img element that holds `one.png`, and add the class newStyle to said paragraph element.
 /***CODE */
     
-    document.querySelectorAll("p")[4].classList.add("newStyle");
-    document.querySelectorAll("p")[4].innerHTML += '<img src = "task-2-images/one.png" alt="test-image">';
+    // document.querySelectorAll("p")[4].classList.add("newStyle");
+    // document.querySelectorAll("p")[4].innerHTML += '<img src = "task-2-images/one.png" alt="test-image">';
 
 
 
@@ -283,13 +283,19 @@ assign the element from innerContainers variable with the same index
 (i.e. colors[0] should be allocated to the first innerContainers element, colors[1] to the second, etc ...) 
 a background using that color.
 /***CODE */
+    
+//     let colors = ['red', 'blue', 'green', 'orange'];
+//     let innerContainers = document.querySelectorAll(".inner-container");
+//     for (let i = 0; i < colors.length && i < innerContainers.length; i++) {
+//     innerContainers[i].style.backgroundColor = colors[i];
+// };
 
 /*************************************** */
-/*** END PART TWO MODIFY */ 
+/*** END PART TWO MODIFY */
 
 
 /*************************************** */
-/*** START PART THREE CREATE */ 
+/*** START PART THREE CREATE */
 /*************************************** */
 /* 1: NEW PARAGRAPHS */
 /* 1A: Access all paragraph elements, and store the result in a variable called: allPTagsThree */
@@ -301,11 +307,29 @@ a background using that color.
 /* 1G: Append this new element to the parent variable within the function. */
 /* 1H: Iterate through the allPTagsThree array and call customCreateElement(), 
 passing the current allPTagsThree element as the parent with each iteration.*/
-/***CODE */
+    /***CODE */
+    
+    let allPTagsThree = document.querySelectorAll("p");
+    function customCreateElement(parent) {
+        let newParagraph = document.createElement("p");
+        newParagraph.textContent = "using create Element";
+        newParagraph.style.backgroundColor = "green";
+        newParagraph.style.color = "white";
+        parent.appendChild(newParagraph);
+    }
+
+    allPTagsThree.forEach(p => {
+    customCreateElement(p);
+    });
 
 
 /***EXPLANATION::
  * 
+ * All paragraph elements get targeted by the queryselector and stored inside the allPTagsThree variable. 
+ * Then inside the createlement function, a new paragraph is created and styled using a background colour and white for the text colour.
+ * This new paragraph element is then appended into the parent of the targeted p elements as seen in allPTagsThree so it appears at the bottom
+ * of each container with the targeted p elements.
+ * For each p element that is targeted, it creates the new p elements to go below the existing ones.
  * 
  */
 
@@ -329,10 +353,30 @@ passing the current allPTagsThree element as the parent with each iteration.*/
 /* 2H: BONUS II: For every div in an even numbered row make it contain the text `EVEN`, 
     otherwise lat it have the content `ODD`.*/
 
-/***CODE */
+    /***CODE */
+    
+function customNewBoxCreate(parent){ 
+  let newDiv = document.createElement("div");
+  newDiv.classList.add("testDiv");
+  parent.appendChild(newDiv);
+  return newDiv;
+}
+let gridParent = document.querySelector("#new-grid");
+let cellSize = 30;
+   for (let i = 0; i <= 9; i++){
+        for (let j = 0; j <= 9; j++){
+            let returnedDiv = customNewBoxCreate(gridParent);
+            returnedDiv.style.left = (j * cellSize) + "px";
+            returnedDiv.style.top = (i * cellSize) + "px";
+        }
+   }
+    
+    console.log(document.getElementsByClassName("testDiv"));
 
 
 /***EXPLANATION::
+ * 
+ * For the console log regarding the testDiv class, 100 of them are called as it is a 10x10 square grid with each unit containing the class name.
  * 
  * 
  */
