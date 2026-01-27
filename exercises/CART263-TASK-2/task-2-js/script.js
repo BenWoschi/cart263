@@ -362,23 +362,25 @@ function customNewBoxCreate(parent){
   return newDiv;
 }
 let gridParent = document.querySelector("#new-grid");
-let cellSize = 30;
+let cellSize = 40;
    for (let i = 0; i <= 9; i++){
         for (let j = 0; j <= 9; j++){
             let returnedDiv = customNewBoxCreate(gridParent);
-            returnedDiv.style.left = (j * cellSize) + "px";
-            returnedDiv.style.top = (i * cellSize) + "px";
+            returnedDiv.style.left = (i * cellSize) + "px";
+            returnedDiv.style.top = (j * cellSize) + "px";
         }
    }
     
     console.log(document.getElementsByClassName("testDiv"));
 
-
 /***EXPLANATION::
  * 
  * For the console log regarding the testDiv class, 100 of them are called as it is a 10x10 square grid with each unit containing the class name.
  * 
- * 
+ * A variable named newdiv stored a new div element, which had a class of testdiv added to it and then appended to the parent.
+ * Newdiv was returned so that it could be used outside of the function. A gridparent variable was created to store and find the new-grid ID,
+ * with a variable of cellSize to store the size of each square. The nested for loops created the 10x10 grid as we have done before.
+ * The +px at the end of the grid creation allowed us to set a position for each square along the loop, with px being recognized by CSS.
  */
 
 /*************************************** */
